@@ -1,0 +1,7 @@
+name: 'Import Excel capitolato_mini'
+type: module
+description: 'esempio importazione file xlsx di esempio'
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:file

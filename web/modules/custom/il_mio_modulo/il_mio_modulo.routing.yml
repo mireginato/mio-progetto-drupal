@@ -1,0 +1,7 @@
+il_mio_modulo.test:
+  path: '/test-pagina'
+  defaults:
+    _controller: '\Drupal\il_mio_modulo\Controller\TestController::build'
+    _title: 'La mia pagina di prova'
+  requirements:
+    _permission: 'access content'

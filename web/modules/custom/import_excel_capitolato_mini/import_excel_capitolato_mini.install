@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function import_excel_capitolato_mini_schema() {
+  $schema['dati_importati'] = [
+    'description' => 'Tabella personalizzata per i dati Excel.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+      ],
+      'alfa' => [
+        'type' => 'varchar',
+        'length' => 255,
+      ],
+      'beta' => [
+        'type' => 'varchar',
+        'length' => 255,
+      ],
+      'gamma' => [
+        'type' => 'varchar',
+        'length' => 255,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+  return $schema;
+}
