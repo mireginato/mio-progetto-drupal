@@ -1,0 +1,17 @@
+# Cartelle di sistema e dipendenze
+/vendor/
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/sites/*/settings.php
+/web/sites/*/settings.local.php
+/web/sites/*/files/
+
+# DDEV e Docker
+.ddev/db_snapshots/
+.ddev/.webimageBuild/
+
+# Sistema operativo e IDE
+.DS_Store
+.vscode/
