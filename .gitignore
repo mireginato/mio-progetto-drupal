@@ -1,17 +1,34 @@
-# Cartelle di sistema e dipendenze
+# --- Cartelle di sistema e dipendenze ---
 /vendor/
 /web/core/
 /web/modules/contrib/
 /web/themes/contrib/
 /web/profiles/contrib/
-/web/sites/*/settings.php
-/web/sites/*/settings.local.php
-/web/sites/*/files/
 
-# DDEV e Docker
+# --- Configurazioni Drupal (Best Practice) ---
+# NON ignorare settings.php, serve per far partire il sito su altri PC
+# Ignoriamo invece i file che contengono dati sensibili o locali
+/web/sites/*/settings.local.php
+/web/sites/*/settings.ddev.php
+/web/sites/*/services.local.yml
+
+# Ignoriamo i file caricati dagli utenti
+/web/sites/*/files/
+/web/sites/*/private/
+
+# --- DDEV e Docker ---
 .ddev/db_snapshots/
 .ddev/.webimageBuild/
+.ddev/.importdb*
+.ddev/commands/host/.homeadditions*
+# Ignora i log e le esportazioni del database locali
+.ddev/commands/_generated_commands-*
 
-# Sistema operativo e IDE
+# --- Sistema operativo e IDE ---
 .DS_Store
 .vscode/
+.idea/
+
+# --- Altri ---
+.htpasswd
+
